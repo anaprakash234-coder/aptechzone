@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AP TECHZONE - Best Gadgets & Deals</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0f19;
+      color: white;
+      text-align: center;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      padding: 20px;
+      background: linear-gradient(90deg, #1e3c72, #2a5298);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #e6e6e6;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      margin: 0 10px;
+      font-weight: bold;
+      font-size: 14px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    section {
+      padding: 50px 20px;
+    }
+
+    .hero {
+      padding: 60px 20px;
+    }
+
+    .hero h2 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      color: #ddd;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #ff9800;
+      color: black;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .cards h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      width: 260px;
+      background: #12192b;
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.15);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0px 0px 30px rgba(0, 255, 255, 0.35);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .card h3 {
+      margin: 12px 0 5px;
+      font-size: 18px;
+    }
+
+    .card p {
+      font-size: 13px;
+      color: #ccc;
+      line-height: 1.5;
+    }
+
+    .buy-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #00e5ff;
+      color: black;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .buy-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .info-box {
+      max-width: 900px;
+      margin: auto;
+      background: #101624;
+      padding: 25px;
+      border-radius: 15px;
+      line-height: 1.7;
+      color: #ddd;
+      text-align: left;
+      box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.08);
+    }
+
+    .info-box h2 {
+      text-align: center;
+      color: #00e5ff;
+    }
+
+    .info-box p {
+      font-size: 14px;
+    }
+
+    .footer {
+      padding: 20px;
+      background: #05070d;
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    .footer a {
+      color: #00e5ff;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .disclaimer {
+      background: #0f1627;
+      padding: 20px;
+      font-size: 13px;
+      color: #bbb;
+    }
+
+    @media(max-width: 600px) {
+      header h1 {
+        font-size: 26px;
+      }
+      nav a {
+        display: inline-block;
+        margin: 5px;
+      }
+      .hero h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>AP TECHZONE</h1>
+    <p>Best Gadgets • Reviews • Amazon Deals</p>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#disclaimer">Disclaimer</a>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <section class="hero" id="home">
+    <h2>🔥 Best Amazon Products Under ₹999</h2>
+    <p>
+      Welcome to AP TECHZONE! Here you will find the best tech gadgets,
+      accessories and deals from Amazon. We share trusted products and real recommendations.
+    </p>
+
+    <a class="btn" href="#products">Explore Products</a>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="cards" id="products">
+    <h2>🔥 Trending Products</h2>
+
+    <div class="card-container">
+
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/61UxfXTUyvL._SX679_.jpg" alt="Earbuds">
+        <h3>Wireless Earbuds</h3>
+        <p>Best earbuds under ₹799 with good bass and battery backup.</p>
+        <a class="buy-btn" href="https://amzn.to/4tk7eAS" target="_blank">Buy Now</a>
+      </div>
+
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/61s7Jq9Wl4L._SX679_.jpg" alt="Powerbank">
+        <h3>Powerbank 10000mAh</h3>
+        <p>Fast charging powerbank under ₹999 for daily use.</p>
+        <a class="buy-btn" href="YOUR_AFFILIATE_LINK_HERE" target="_blank">Buy Now</a>
+      </div>
+
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/61l9ppRIiqL._SX679_.jpg" alt="Trimmer">
+        <h3>Trimmer</h3>
+        <p>Best trimmer under ₹999 for clean shaving and grooming.</p>
+        <a class="buy-btn" href="YOUR_AFFILIATE_LINK_HERE" target="_blank">Buy Now</a>
+      </div>
+
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/61KcY0D4fFL._SX679_.jpg" alt="Smartwatch">
+        <h3>Smartwatch</h3>
+        <p>Budget smartwatch under ₹999 with fitness tracking features.</p>
+        <a class="buy-btn" href="YOUR_AFFILIATE_LINK_HERE" target="_blank">Buy Now</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="info-box">
+      <h2>About AP TECHZONE</h2>
+      <p>
+        AP TECHZONE is a tech-based platform where we share the best gadgets,
+        product reviews, and Amazon deals.
+      </p>
+      <p>
+        Our mission is to help people choose the best product at the best price.
+        We recommend products after checking reviews, ratings, and value for money.
+      </p>
+      <p>
+        If you want daily deals, you can follow us on YouTube and Instagram.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="info-box">
+      <h2>Contact Us</h2>
+      <p><b>Email:</b> aptechzone@gmail.com</p>
+      <p><b>Instagram:</b> @aptechzone</p>
+      <p><b>YouTube:</b> AP TECHZONE</p>
+      <p>
+        For business inquiries, collaborations and sponsorships, email us anytime.
+      </p>
+    </div>
+  </section>
+
+  <!-- PRIVACY POLICY -->
+  <section id="privacy">
+    <div class="info-box">
+      <h2>Privacy Policy</h2>
+      <p>
+        We respect your privacy. This website does not collect personal information directly.
+      </p>
+      <p>
+        However, we may use third-party services such as Amazon affiliate links.
+        Amazon may use cookies to track purchases for affiliate commissions.
+      </p>
+      <p>
+        If you do not agree with this, please do not use affiliate links.
+      </p>
+    </div>
+  </section>
+
+  <!-- DISCLAIMER -->
+  <section id="disclaimer">
+    <div class="info-box">
+      <h2>Affiliate Disclaimer</h2>
+      <p>
+        AP TECHZONE participates in the Amazon Associates Program. This means we may earn a small commission
+        if you buy products using our affiliate links.
+      </p>
+      <p>
+        <b>As an Amazon Associate, I earn from qualifying purchases.</b>
+      </p>
+      <p>
+        This commission does not increase the price of the product for you.
+      </p>
+    </div>
+  </section>
+
+  <!-- EXTRA DISCLAIMER BOX -->
+  <div class="disclaimer">
+    ⚠️ Disclaimer: Some links on this website are affiliate links.
+    As an Amazon Associate, I earn from qualifying purchases.
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 AP TECHZONE | All Rights Reserved</p>
+    <p>
+      <a href="#privacy">Privacy Policy</a> |
+      <a href="#disclaimer">Affiliate Disclaimer</a>
+    </p>
+  </footer>
+
+</body>
+</html>
