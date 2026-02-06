@@ -225,6 +225,13 @@
       <a href="#disclaimer">Disclaimer</a>
     </nav>
   </header>
+  
+  <div style="text-align:center; margin:20px;">
+  <input type="text" id="searchInput" placeholder="Search products..." 
+  onkeyup="searchProducts()"
+  style="width:80%; max-width:400px; padding:12px; border-radius:10px; border:none; font-size:16px;">
+</div>
+
 
   <!-- HOME -->
   <section class="hero" id="home">
@@ -243,7 +250,7 @@
 
     <div class="card-container">
 
-      <div class="card">
+      <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/61QeGcag85L._SL1500_.jpg" alt="Earbuds">
         <h3>Wireless Earbuds</h3>
         <p>Best earbuds under ₹799 with good bass and battery backup.</p>
@@ -360,9 +367,26 @@
       <a href="#disclaimer">Affiliate Disclaimer</a>
     </p>
   </footer>
+  
+<script>
+function searchProducts() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+  let products = document.querySelectorAll(".product-card");
+
+  products.forEach(product => {
+    let text = product.innerText.toLowerCase();
+    if (text.includes(input)) {
+      product.style.display = "";
+    } else {
+      product.style.display = "none";
+    }
+  });
+}
+</script>
 
 </body>
 </html>
+
 
 
 
