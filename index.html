@@ -253,6 +253,29 @@
         font-size: 24px;
       }
     }
+    <style>
+/* watermark text */
+body::before {
+  content: "AP TECHZONE";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-size: 100px;
+  color: rgba(255,255,255,0.05); /* very light */
+  z-index: 0;
+  pointer-events: none; /* clicks pass through */
+  white-space: nowrap;
+  animation: float 20s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translate(-50%, -50%) rotate(-30deg); }
+  50% { transform: translate(-55%, -55%) rotate(-30deg); }
+  100% { transform: translate(-50%, -50%) rotate(-30deg); }
+}
+</style>
+
   </style>
 </head>
 
@@ -463,6 +486,7 @@ function searchProducts() {
 
 </body>
 </html>
+
 
 
 
