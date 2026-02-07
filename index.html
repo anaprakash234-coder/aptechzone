@@ -6,6 +6,41 @@
   <title>AP TECHZONE - Best Gadgets & Deals</title>
 
   <style>
+.hamburger {
+  font-size: 30px;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1000;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  display: block;
+}
+
+.sidebar a:hover {
+  background-color: #575757;
+}
+</style>
+
+  <style>
     .products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -258,6 +293,31 @@
 
 <body>
 
+  <!-- Hamburger Icon -->
+<div class="hamburger" onclick="openMenu()">☰</div>
+
+<!-- Sidebar -->
+<div id="mySidebar" class="sidebar">
+  <a href="#" onclick="showCategory('mobile')">Mobile Accessories</a>
+  <a href="#" onclick="showCategory('fitness')">Fitness</a>
+  <a href="#" onclick="showCategory('home')">Home & Kitchen</a>
+</div>
+
+<!-- Product Sections -->
+<div id="mobile" style="display:none; padding:20px;">
+  <h2>Mobile Accessories</h2>
+  <!-- Products yahan add kare -->
+</div>
+
+<div id="fitness" style="display:none; padding:20px;">
+  <h2>Fitness</h2>
+</div>
+
+<div id="home" style="display:none; padding:20px;">
+  <h2>Home & Kitchen</h2>
+</div>
+
+
   <!-- HEADER -->
   <header>
     <h1>AP TECHZONE</h1>
@@ -303,6 +363,9 @@
         <p>Best earbuds under ₹799 with good bass and battery backup.</p>
         <a class="buy-btn" href="https://amzn.to/45UTr9U" target="_blank">Buy Now</a>
       </div>
+
+      <div id="mobile" style="display:none; padding:20px;">
+  <h2>Mobile Accessories</h2>
 
       <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/61MrypHLdML._SL1500_.jpg" alt="iphone case">
@@ -459,8 +522,23 @@ function searchProducts() {
 }
 </script>
 
+  <script>
+function openMenu() {
+  document.getElementById("mySidebar").style.width = "250px";
+}
+
+function showCategory(category) {
+  let sections = ['mobile','fitness','home'];
+  sections.forEach(sec => {
+    document.getElementById(sec).style.display = (sec === category) ? 'block' : 'none';
+  });
+  document.getElementById("mySidebar").style.width = "0"; // close sidebar
+}
+</script>
+
 </body>
 </html>
+
 
 
 
