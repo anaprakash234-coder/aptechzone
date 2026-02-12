@@ -4,8 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="p:domain_verify" content="a0aa2e50f5e7dea7ec1d5cff9677447e"/>
   <meta name="google-site-verification" content="E9HdU3mGgu-ln2Gd5hTtOqdVo1MkFGliSd4xaBigUuY" />
+  
   <title>AP TECHZONE - Best Gadgets & Deals</title>
+
+  <!-- Favicon / Site Icon -->
+  <link rel="icon" href="https://raw.githubusercontent.com/anaprakash234-coder/aptechzone/main/ApTech%20Zone%20logo%20design.png" type="image/png">
+
+  <!-- Animate.css for animations -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <!-- Google Structured Data for logo in search results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AP TECHZONE",
+    "url": "https://yourwebsite.com",
+    "logo": "https://raw.githubusercontent.com/anaprakash234-coder/aptechzone/main/ApTech%20Zone%20logo%20design.png"
+  }
+  </script>
+
   <style>
     body {
       margin: 0;
@@ -38,6 +56,11 @@
       z-index: -1;
     }
 
+    @keyframes floatParticles {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-50px); }
+    }
+
     header {
       padding: 20px;
       background: linear-gradient(90deg, rgba(30, 60, 114, 0.9), rgba(42, 82, 152, 0.9));
@@ -47,6 +70,9 @@
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
       animation: slideInDown 1s ease-out;
       backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     header h1 {
@@ -55,6 +81,8 @@
       letter-spacing: 1px;
       text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
       animation: glow 2s ease-in-out infinite alternate;
+      flex: 1;
+      text-align: center;
     }
 
     header p {
@@ -63,8 +91,11 @@
       color: #e6e6e6;
     }
 
-    nav {
-      margin-top: 10px;
+    /* Logo Image */
+    header .logo img {
+      width: 100px; /* Adjust size */
+      height: auto;
+      display: block;
     }
 
     nav a {
@@ -78,6 +109,12 @@
       transition: all 0.3s ease;
       position: relative;
       animation: pulse 3s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
     }
 
     nav a:hover {
@@ -439,6 +476,49 @@
       0% { transform: translateY(0) rotate(0deg); }
       100% { transform: translateY(-20px) rotate(360deg); }
     }
+
+    /* Responsive Header / Logo adjustments for Mobile */
+@media(max-width: 600px) {
+  header {
+    flex-direction: column; /* Logo aur Title stack ho jaye */
+    align-items: center;
+    padding: 15px 10px;
+  }
+
+  header .logo {
+    margin-bottom: 10px;
+  }
+
+  header h1 {
+    font-size: 24px;
+    margin: 5px 0;
+    text-align: center;
+  }
+
+  header p {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap; /* Navigation links wrap ho jaye */
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin: 5px 8px; /* Links ke beech spacing thodi kam */
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  .logo img {
+    width: 80px; /* Thoda chhota logo mobile par */
+    height: auto;
+  }
+}
+    
   </style>
 </head>
 
@@ -446,6 +526,13 @@
 
   <!-- HEADER -->
   <header>
+    <!-- Logo Left -->
+  <div class="logo">
+    <a href="index.html">
+      <img src="https://raw.githubusercontent.com/anaprakash234-coder/aptechzone/main/ApTech%20Zone%20logo%20design.png" alt="ApTech Zone Logo">
+    </a>
+  </div>
+
     <h1>AP TECHZONE</h1>
     <p>Best Gadgets • Reviews • Hot Deals</p>
 
@@ -749,6 +836,7 @@ function searchProducts() {
 
 </body>
 </html>
+
 
 
 
