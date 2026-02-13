@@ -40,7 +40,6 @@
       position: relative;
     }
 
-    /* Advanced Animation: Floating Particles Background */
     body::before {
       content: '';
       position: fixed;
@@ -91,9 +90,8 @@
       color: #e6e6e6;
     }
 
-    /* Logo Image */
     header .logo img {
-      width: 100px; /* Adjust size */
+      width: 100px;
       height: auto;
       display: block;
     }
@@ -237,11 +235,12 @@
 
     .card-container {
       display: grid;
-      grid-template-columns: repeat(4, 1fr); /* Adjusted to 4 columns for desktop */
+      grid-template-columns: repeat(4, 1fr);
       gap: 20px;
       margin-top: 20px;
     }
 
+    /* UPDATED: cursor pointer */
     .product-card {
       background: linear-gradient(135deg, #121a2b 0%, #1a1a2e 100%);
       border-radius: 15px;
@@ -251,6 +250,7 @@
       overflow: hidden;
       position: relative;
       animation: cardFloat 6s ease-in-out infinite;
+      cursor: pointer;
     }
 
     .product-card::before {
@@ -388,61 +388,27 @@
       }
     }
 
-    /* Keyframe animations */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes slideInDown {
-      from { transform: translateY(-100%); }
-      to { transform: translateY(0); }
-    }
-
-    @keyframes slideInUp {
-      from { transform: translateY(100%); }
-      to { transform: translateY(0); }
-    }
-
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes slideInDown { from { transform: translateY(-100%); } to { transform: translateY(0); } }
+    @keyframes slideInUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
     @keyframes bounceIn {
       0% { transform: scale(0.3); opacity: 0; }
       50% { transform: scale(1.05); }
       70% { transform: scale(0.9); }
       100% { transform: scale(1); opacity: 1; }
     }
-
     @keyframes glow {
       from { text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
       to { text-shadow: 0 0 20px rgba(0, 229, 255, 0.8); }
     }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
-
     @keyframes shake {
       0%, 100% { transform: translateX(0); }
       25% { transform: translateX(-5px); }
       75% { transform: translateX(5px); }
     }
-
-    @keyframes slideInLeft {
-      from { transform: translateX(-100%); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
-    }
-
-    @keyframes cardFloat {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-
+    @keyframes slideInLeft { from { transform: translateX(-100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+    @keyframes cardFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
     @keyframes colorCycle {
       0% { color: #00e5ff; }
       25% { color: #ff9800; }
@@ -450,75 +416,56 @@
       75% { color: #0099cc; }
       100% { color: #00e5ff; }
     }
-
     @keyframes btnPulse {
       0% { box-shadow: 0 4px 15px rgba(0, 229, 255, 0.4); }
       50% { box-shadow: 0 4px 25px rgba(0, 229, 255, 0.8); }
       100% { box-shadow: 0 4px 15px rgba(0, 229, 255, 0.4); }
     }
+    @keyframes zoomIn { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    @keyframes typewriter { from { width: 0; } to { width: 100%; } }
+    @keyframes parallax { 0% { background-position: center top; } 100% { background-position: center bottom; } }
 
-    @keyframes zoomIn {
-      from { transform: scale(0); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
-
-    @keyframes typewriter {
-      from { width: 0; }
-      to { width: 100%; }
-    }
-
-    @keyframes parallax {
-      0% { background-position: center top; }
-      100% { background-position: center bottom; }
-    }
-
-    @keyframes floatParticles {
-      0% { transform: translateY(0) rotate(0deg); }
-      100% { transform: translateY(-20px) rotate(360deg); }
-    }
-    
     /* Responsive Header / Logo adjustments for Mobile */
-@media(max-width: 600px) {
-  header {
-    flex-direction: column; /* Logo aur Title stack ho jaye */
-    align-items: center;
-    padding: 15px 10px;
-  }
+    @media(max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 10px;
+      }
 
-  header .logo {
-    margin-bottom: 10px;
-  }
+      header .logo {
+        margin-bottom: 10px;
+      }
 
-  header h1 {
-    font-size: 24px;
-    margin: 5px 0;
-    text-align: center;
-  }
+      header h1 {
+        font-size: 24px;
+        margin: 5px 0;
+        text-align: center;
+      }
 
-  header p {
-    font-size: 12px;
-    text-align: center;
-  }
+      header p {
+        font-size: 12px;
+        text-align: center;
+      }
 
-  nav {
-    display: flex;
-    flex-wrap: wrap; /* Navigation links wrap ho jaye */
-    justify-content: center;
-    margin-top: 10px;
-  }
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+      }
 
-  nav a {
-    margin: 5px 8px; /* Links ke beech spacing thodi kam */
-    font-size: 13px;
-    padding: 6px 10px;
-  }
+      nav a {
+        margin: 5px 8px;
+        font-size: 13px;
+        padding: 6px 10px;
+      }
 
-  .logo img {
-    width: 80px; /* Thoda chhota logo mobile par */
-    height: auto;
-  }
-}
-    
+      .logo img {
+        width: 80px;
+        height: auto;
+      }
+    }
   </style>
 </head>
 
@@ -526,12 +473,11 @@
 
   <!-- HEADER -->
   <header>
-    <!-- Logo Left -->
-  <div class="logo">
-    <a href="index.html">
-      <img src="https://raw.githubusercontent.com/anaprakash234-coder/aptechzone/main/ApTech%20Zone%20logo%20design.png" alt="ApTech Zone Logo">
-    </a>
-  </div>
+    <div class="logo">
+      <a href="index.html">
+        <img src="https://raw.githubusercontent.com/anaprakash234-coder/aptechzone/main/ApTech%20Zone%20logo%20design.png" alt="ApTech Zone Logo">
+      </a>
+    </div>
 
     <h1>AP TECHZONE</h1>
     <p>Best Gadgets • Reviews • Hot Deals</p>
@@ -567,104 +513,107 @@
 
     <div class="card-container">
 
-      <div class="product-card">
+      <div class="product-card" onclick="openProduct('producr1.html')">
         <img src="https://m.media-amazon.com/images/I/71i-8Ji7pgL._SL1500_.jpg" alt="artificial hanging plants">
         <h3>🌿 Artificial Hanging Plant</h3>
         <p>🌿 Artificial Hanging Plants for Wall & Balcony Decor under 999rs..</p>
-        <a class="buy-btn" href="product1.html">View Details</a>
+        <a class="buy-btn" href="https://amzn.to/3MoD7rl" target="_blank" onclick="event.stopPropagation();">Buy Now</a>
       </div>
 
-       <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/51k1p21-jfL.jpg" alt=" flower port">
-        <h3>🌼beautiful flower port</h3>
-        <p> pack of four for room decor and balcony decor. under 999rs..</p>
-        <a class="buy-btn" href="https://amzn.to/4r7ZVuu" target="_blank">Buy Now</a>
+      <div class="product-card" onclick="openProduct('flowerpot.html')">
+        <img src="https://m.media-amazon.com/images/I/51k1p21-jfL.jpg" alt="flower pot">
+        <h3>🌼 Beautiful Flower Pot</h3>
+        <p>Pack of four for room decor and balcony decor. under 999rs..</p>
+        <a class="buy-btn" href="https://amzn.to/4r7ZVuu" target="_blank" onclick="event.stopPropagation();">Buy Now</a>
       </div>
 
-       <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/71VtL+lxNhL._SL1024_.jpg" alt="neon light ">
-        <h3>cool neon rgb light</h3>
-        <p> 16.4 Feet Neon LED Strip Light with 12V Adapter | Cuttable & Flexible Waterproof Neon Rope Light for Wall Decor, Indoor & Outdoor under 999rs..</p>
-        <a class="buy-btn" href="https://amzn.to/4tzBfMZ" target="_blank">Buy Now</a>
+      <div class="product-card" onclick="openProduct('neonlight.html')">
+        <img src="https://m.media-amazon.com/images/I/71VtL+lxNhL._SL1024_.jpg" alt="neon light">
+        <h3>Cool Neon RGB Light</h3>
+        <p>16.4 Feet Neon LED Strip Light with Adapter under 999rs..</p>
+        <a class="buy-btn" href="https://amzn.to/4tzBfMZ" target="_blank" onclick="event.stopPropagation();">Buy Now</a>
       </div>
 
-       <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/51jw5oJbkeL._SL1024_.jpg" alt="wall shelves ">
-        <h3>floating wall shelve white</h3>
-        <p>Luxury 3-Tier Wall Mounted Floating Shelf with Gold Metal Frame – Modern Decorative Storage Display Rack for Living Room, Bedroom, Bathroom & Kitchen (White & Gold) under 999rs..</p>
-        <a class="buy-btn" href="https://amzn.to/4tAXS3Q" target="_blank">Buy Now</a>
+      <div class="product-card" onclick="openProduct('wallshelf.html')">
+        <img src="https://m.media-amazon.com/images/I/51jw5oJbkeL._SL1024_.jpg" alt="wall shelves">
+        <h3>Floating Wall Shelf White</h3>
+        <p>Luxury 3-Tier Wall Mounted Floating Shelf under 999rs..</p>
+        <a class="buy-btn" href="https://amzn.to/4tAXS3Q" target="_blank" onclick="event.stopPropagation();">Buy Now</a>
       </div>
 
-       <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/71Q4Buc8g9L._SL1500_.jpg" alt=" moon light">
-        <h3>asthetic home decor</h3>
-        <p> Stylish LED Acrylic Night Light 🌟 under 999rs..</p>
-        <a class="buy-btn" href="https://amzn.to/4kCvLx2" target="_blank">Buy Now</a>
+      <div class="product-card" onclick="openProduct('nightlight.html')">
+        <img src="https://m.media-amazon.com/images/I/71Q4Buc8g9L._SL1500_.jpg" alt="moon light">
+        <h3>Aesthetic Home Decor</h3>
+        <p>Stylish LED Acrylic Night Light under 999rs..</p>
+        <a class="buy-btn" href="https://amzn.to/4kCvLx2" target="_blank" onclick="event.stopPropagation();">Buy Now</a>
       </div>
 
-       <div class="product-card">
+      <!-- Remaining products: Same layout (no page created yet) -->
+      <!-- You can add onclick openProduct('page.html') later -->
+      
+      <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/71oQCHZ9zlL._SL1500_.jpg" alt="floor mat comfy">
-        <h3>comfy floor mat</h3>
-        <p> bedroom asthetic and comfy floor mat 🌟 under 999rs..</p>
+        <h3>Comfy Floor Mat</h3>
+        <p>Bedroom aesthetic and comfy floor mat under 999rs..</p>
         <a class="buy-btn" href="https://amzn.to/3Zw7JtY" target="_blank">Buy Now</a>
       </div>
 
-       <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/71Yqd+pb6dL._SL1500_.jpg" alt="Wall Hanging ">
-        <h3>woody wall hanging</h3>
-        <p> Printed Mdf Wooden Wall Hanging | Living Room | Office | Home Decor Items | Gifts | Wall Artwork For Hall  under 299rs..</p>
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71Yqd+pb6dL._SL1500_.jpg" alt="Wall Hanging">
+        <h3>Woody Wall Hanging</h3>
+        <p>Printed MDF Wooden Wall Hanging under 299rs..</p>
         <a class="buy-btn" href="https://amzn.to/4tEZYji" target="_blank">Buy Now</a>
       </div>
 
-        <div class="product-card">
+      <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/51LcOCNOB5L.jpg" alt="decor light">
-        <h3> 🪞 Aesthetic LED Mirror Lights </h3>
-        <p>Perfect for makeup table, mirror decor,under999rs..</p>
+        <h3>🪞 Aesthetic LED Mirror Lights</h3>
+        <p>Perfect for makeup table, mirror decor, under 999rs..</p>
         <a class="buy-btn" href="https://amzn.to/4rEojDN" target="_blank">Buy Now</a>
-        </div>
+      </div>
 
-       <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/61YuxQTlH4L._SL1500_.jpg" alt=" Fish Touch Silicon night light">
-        <h3> Fish Touch Silicon </h3>
-        <p>Birthday Gift for Girls and Boys, Axolotl Night Lamp </p>
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/61YuxQTlH4L._SL1500_.jpg" alt="Fish Touch Silicon night light">
+        <h3>Fish Touch Silicon</h3>
+        <p>Birthday Gift for Girls and Boys, Axolotl Night Lamp</p>
         <a class="buy-btn" href="https://amzn.to/3ZYfFEp" target="_blank">Buy Now</a>
       </div>
 
       <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/616uFn6pwHL._SL1500_.jpg" alt=" floating wall shelve">
-        <h3> floating shelve </h3>
-        <p>Floating Wall Shelves for Small Room | Minimal Home Decor under 300rs.. </p>
+        <img src="https://m.media-amazon.com/images/I/616uFn6pwHL._SL1500_.jpg" alt="floating wall shelve">
+        <h3>Floating Shelf</h3>
+        <p>Floating Wall Shelves for Small Room under 300rs..</p>
         <a class="buy-btn" href="https://amzn.to/4qxcuyt" target="_blank">Buy Now</a>
-      </div> 
+      </div>
 
       <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/81YpFCy0rBL._SL1500_.jpg" alt=" moon light">
-        <h3> Sunset Lamp for Aesthetic Bedroom Decor </h3>
-        <p>Sunset Lamp for Aesthetic Bedroom Decor (Under ₹999).. </p>
+        <img src="https://m.media-amazon.com/images/I/81YpFCy0rBL._SL1500_.jpg" alt="sunset lamp">
+        <h3>Sunset Lamp</h3>
+        <p>Sunset Lamp for Aesthetic Bedroom Decor under ₹999..</p>
         <a class="buy-btn" href="https://amzn.to/4qyijf9" target="_blank">Buy Now</a>
       </div>
 
       <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/71CrRyGERnL._SL1500_.jpg" alt=" wall shelve">
-        <h3> floating shelve </h3>
-        <p>Floating Wall Shelves for Small Room | Minimal Home Decor under 300rs.. </p>
+        <img src="https://m.media-amazon.com/images/I/71CrRyGERnL._SL1500_.jpg" alt="wall shelve">
+        <h3>Floating Shelf</h3>
+        <p>Floating Wall Shelves for Small Room under 300rs..</p>
         <a class="buy-btn" href="https://amzn.to/4ao0j0O" target="_blank">Buy Now</a>
       </div>
 
-     <div class="product-card">
+      <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/61wLtcdgvwL._SL1500_.jpg" alt="flame less candle">
-        <h3>🕯️ Flameless LED Candles </h3>
-        <p>🕯️ Flameless LED Candles for Luxury Home Decor under 999rs..</p>
+        <h3>🕯️ Flameless LED Candles</h3>
+        <p>Flameless LED Candles for Luxury Home Decor under 999rs..</p>
         <a class="buy-btn" href="https://amzn.to/3ZrAI27" target="_blank">Buy Now</a>
-      </div>  
+      </div>
 
-     <div class="product-card">
+      <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/619EsyocJmL._SL1500_.jpg" alt="night lamp">
-        <h3> duck night lamp </h3>
-        <p>Best for night light, study table decor and gift idea.. </p>
+        <h3>Duck Night Lamp</h3>
+        <p>Best for night light, study table decor and gift idea..</p>
         <a class="buy-btn" href="https://amzn.to/4kuRkj7" target="_blank">Buy Now</a>
-      </div> 
-      
+      </div>
+
       <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/61QeGcag85L._SL1500_.jpg" alt="Earbuds">
         <h3>Wireless Earbuds</h3>
@@ -703,7 +652,7 @@
       <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/71Fgk5cucYL._SL1500_.jpg" alt="Keyboard">
         <h3>Keyboard</h3>
-        <p>Wireless Keyboard with 2.4 GHz & 87 Keys, Windows(D-Lite + Silver).</p>
+        <p>Wireless Keyboard with 2.4 GHz & 87 Keys.</p>
         <a class="buy-btn" href="https://amzn.to/4r29ACG" target="_blank">Buy Now</a>
       </div>
 
@@ -717,14 +666,14 @@
       <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/71in30c3TgL._SL1500_.jpg" alt="iPhone Case">
         <h3>iPhone Case</h3>
-        <p>iPhone 17 Pro case for women, GREAT REVIEWS, with great price.</p>
+        <p>iPhone 17 Pro case for women, GREAT REVIEWS.</p>
         <a class="buy-btn" href="https://amzn.to/4thzKTP" target="_blank">Buy Now</a>
       </div>
 
       <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/61Av1lptLkL._SL1500_.jpg" alt="Hand Gripper">
         <h3>Hand Gripper</h3>
-        <p>Best hand gripper under 200rs..💪.</p>
+        <p>Best hand gripper under 200rs..💪</p>
         <a class="buy-btn" href="https://amzn.to/3ZolOtq" target="_blank">Buy Now</a>
       </div>
 
@@ -738,38 +687,38 @@
       <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/71cjth7t1nL._SL1500_.jpg" alt="Pushup Board">
         <h3>Pushup Board</h3>
-        <p>1 Push Up Board with Handles for Men & Women. (Multicolour).</p>
+        <p>1 Push Up Board with Handles for Men & Women.</p>
         <a class="buy-btn" href="https://amzn.to/4cdzwXs" target="_blank">Buy Now</a>
       </div>
 
       <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/71hlawLdLtL._SL1500_.jpg" alt="Perfume">
         <h3>Perfume</h3>
-        <p>Best perfume for men under $50.</p>
+        <p>Best perfume for men under ₹999.</p>
         <a class="buy-btn" href="https://amzn.to/4tsSVtV" target="_blank">Buy Now</a>
       </div>
 
       <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/81O6f9tQVCL._SX679_.jpg" alt="Bagpack">
         <h3>Bagpack</h3>
-        <p>18L Premium Canvas Laptop Backpack|Water-Resistant, Men & Women.</p>
+        <p>18L Premium Canvas Laptop Backpack.</p>
         <a class="buy-btn" href="https://amzn.to/3ZKlSnz" target="_blank">Buy Now</a>
       </div>
 
-       <div class="product-card">
+      <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/71-vVsNahOL._SX695_.jpg" alt="Bagpack">
-        <h3>Bagpack(amir khan also wear in 3 idiot)</h3>
-        <p> Premium Laptop Backpack|Water-Resistant, Men & Women especially for college going..</p>
+        <h3>Bagpack (3 Idiots Style)</h3>
+        <p>Premium Laptop Backpack especially for college.</p>
         <a class="buy-btn" href="https://amzn.to/4qqsCBO" target="_blank">Buy Now</a>
       </div>
 
-     <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/613dQOkuN1L._SL1065_.jpg" alt="bathroom accesories">
-        <h3>Kitchen Corner Wall Mounted Rack Shelf Bathroom</h3>
-        <p> Kitchen Corner Wall Mounted Rack Shelf Bathroom under 300rs..</p>
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/613dQOkuN1L._SL1065_.jpg" alt="bathroom accessories">
+        <h3>Kitchen Corner Wall Mounted Rack Shelf</h3>
+        <p>Kitchen Corner Wall Mounted Rack Shelf under 300rs..</p>
         <a class="buy-btn" href="https://amzn.to/4r4vANj" target="_blank">Buy Now</a>
-      </div>  
-    
+      </div>
+
     </div>
   </section>
 
@@ -838,13 +787,11 @@
     </div>
   </section>
 
-  <!-- EXTRA DISCLAIMER BOX -->
   <div class="disclaimer">
     ⚠️ Disclaimer: Some links on this website are affiliate links.
     As an Amazon Associate or more, I earn from qualifying purchases.
   </div>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <p>© 2026 AP TECHZONE | All Rights Reserved</p>
     <p>
@@ -852,25 +799,31 @@
       <a href="#disclaimer">Affiliate Disclaimer</a>
     </p>
   </footer>
-  
-<script>
-function searchProducts() {
-  let input = document.getElementById("searchInput").value.toLowerCase();
-  let products = document.querySelectorAll(".product-card");
 
-  products.forEach(product => {
-    let text = product.innerText.toLowerCase();
-    if (text.includes(input)) {
-      product.style.display = "";
-    } else {
-      product.style.display = "none";
+  <script>
+    function searchProducts() {
+      let input = document.getElementById("searchInput").value.toLowerCase();
+      let products = document.querySelectorAll(".product-card");
+
+      products.forEach(product => {
+        let text = product.innerText.toLowerCase();
+        if (text.includes(input)) {
+          product.style.display = "";
+        } else {
+          product.style.display = "none";
+        }
+      });
     }
-  });
-}
-</script>
+
+    // NEW FUNCTION (Product page open)
+    function openProduct(pageName) {
+      window.open(pageName, "_blank");
+    }
+  </script>
 
 </body>
 </html>
+
 
 
 
