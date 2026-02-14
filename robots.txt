@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://anaprakash234-coder.github.io/aptechzone/sitemap.xml
