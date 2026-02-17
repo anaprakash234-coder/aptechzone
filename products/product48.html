@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>blutooth head phone- AP TECHZONE</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://raw.githubusercontent.com/anaprakash234-coder/aptechzone/main/ApTech%20Zone%20logo%20design.png" type="image/png">
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: 
+        linear-gradient(135deg, rgba(11, 15, 25, 0.8) 0%, rgba(26, 26, 46, 0.8) 50%, rgba(22, 33, 62, 0.8) 100%),
+        url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+      background-size: cover;
+      background-attachment: fixed;
+      color: white;
+      text-align: center;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(0, 229, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 152, 0, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+      animation: floatParticles 20s ease-in-out infinite alternate;
+      z-index: -1;
+    }
+
+    @keyframes floatParticles {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-50px); }
+    }
+
+    /* HEADER (same as homepage) */
+    header {
+      padding: 20px;
+      background: linear-gradient(90deg, rgba(30, 60, 114, 0.9), rgba(42, 82, 152, 0.9));
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      animation: slideInDown 1s ease-out;
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+      letter-spacing: 1px;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      animation: glow 2s ease-in-out infinite alternate;
+      flex: 1;
+      text-align: center;
+    }
+
+    header p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #e6e6e6;
+      width: 100%;
+      text-align: center;
+    }
+
+    header .logo img {
+      width: 90px;
+      height: auto;
+      display: block;
+    }
+
+    nav {
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      margin: 0 10px;
+      font-weight: bold;
+      font-size: 14px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      position: relative;
+      animation: pulse 3s ease-in-out infinite;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px) rotate(5deg);
+      box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: #00e5ff;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    /* PRODUCT CONTAINER */
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 15px;
+    }
+
+    .product-box {
+      background: linear-gradient(135deg, rgba(16, 22, 36, 0.9) 0%, rgba(26, 26, 46, 0.9) 100%);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
+      animation: fadeInUp 1.2s ease-out;
+      backdrop-filter: blur(10px);
+    }
+
+    .product-box h2 {
+      color: #00e5ff;
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-shadow: 0 0 12px rgba(0,229,255,0.4);
+    }
+
+    .product-img {
+      width: 100%;
+      max-width: 480px;
+      border-radius: 18px;
+      margin: 20px auto;
+      display: block;
+      box-shadow: 0 0 25px rgba(0,0,0,0.45);
+      transition: 0.3s;
+    }
+
+    .product-img:hover {
+      transform: scale(1.05) rotate(2deg);
+    }
+
+    .product-box p {
+      font-size: 15px;
+      line-height: 1.7;
+      opacity: 0.9;
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .features {
+      text-align: left;
+      max-width: 650px;
+      margin: 25px auto;
+      font-size: 15px;
+      line-height: 1.8;
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    .features li {
+      margin-bottom: 8px;
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 25px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .buy-btn {
+      background: linear-gradient(45deg, #00e5ff, #0099cc);
+      color: black;
+      box-shadow: 0 4px 15px rgba(0, 229, 255, 0.4);
+      animation: btnPulse 2s ease-in-out infinite;
+    }
+
+    .buy-btn:hover {
+      transform: scale(1.06) translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 229, 255, 0.7);
+    }
+
+    .home-btn {
+      background: rgba(255,255,255,0.08);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.15);
+      margin-left: 10px;
+    }
+
+    .home-btn:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    @keyframes btnPulse {
+      0% { box-shadow: 0 4px 15px rgba(0, 229, 255, 0.4); }
+      50% { box-shadow: 0 4px 25px rgba(0, 229, 255, 0.8); }
+      100% { box-shadow: 0 4px 15px rgba(0, 229, 255, 0.4); }
+    }
+
+    /* ABOUT SECTION */
+    .about-box {
+      margin-top: 40px;
+      background: linear-gradient(135deg, rgba(16, 22, 36, 0.85) 0%, rgba(26, 26, 46, 0.85) 100%);
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      animation: fadeInUp 1.3s ease-out;
+      backdrop-filter: blur(10px);
+    }
+
+    .about-box h2 {
+      color: #ff9800;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .about-box p {
+      text-align: center;
+      font-size: 15px;
+      opacity: 0.9;
+      line-height: 1.7;
+    }
+
+    /* DISCLAIMER + FOOTER same as homepage */
+    .disclaimer {
+      margin-top: 40px;
+      background: linear-gradient(135deg, #0f1627 0%, #1a1a2e 100%);
+      padding: 20px;
+      font-size: 13px;
+      color: #bbb;
+      animation: slideInUp 1s ease-out;
+      backdrop-filter: blur(10px);
+    }
+
+    footer {
+      padding: 20px;
+      background: linear-gradient(135deg, #05070d 0%, #0b0f19 100%);
+      font-size: 13px;
+      color: #aaa;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+    }
+
+    footer a {
+      color: #00e5ff;
+      text-decoration: none;
+      margin: 0 8px;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #ff9800;
+      text-decoration: underline;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes slideInDown { from { transform: translateY(-100%); } to { transform: translateY(0); } }
+    @keyframes slideInUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+    @keyframes glow { from { text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); } to { text-shadow: 0 0 20px rgba(0, 229, 255, 0.8); } }
+
+    /* MOBILE */
+    @media(max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 10px;
+      }
+
+      header .logo {
+        margin-bottom: 10px;
+      }
+
+      header h1 {
+        font-size: 24px;
+        margin: 5px 0;
+        text-align: center;
+      }
+
+      header p {
+        font-size: 12px;
+        text-align: center;
+      }
+
+      nav a {
+        margin: 5px 8px;
+        font-size: 13px;
+        padding: 6px 10px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="https://raw.githubusercontent.com/anaprakash234-coder/aptechzone/main/ApTech%20Zone%20logo%20design.png" alt="ApTech Zone Logo">
+      </a>
+    </div>
+
+    <h1>AP TECHZONE</h1>
+    <p>Best Gadgets • Reviews • Hot Deals</p>
+
+    <nav>
+      <a href="index.html">🏠 Home</a>
+      <a href="index.html#products">🛒 Products</a>
+      <a href="#about">ℹ️ About</a>
+      <a href="index.html#contact">📩 Contact</a>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <div class="container">
+
+    <!-- PRODUCT BOX -->
+    <div class="product-box">
+      <h2>Noise Master Buds Max</h2>
+
+      <img class="product-img" src="https://m.media-amazon.com/images/I/618JO08cG+L._SL1500_.jpg" alt="blutooth head phone">
+      <p>
+Noise Master Buds Max, Sound by Bose Wireless Over-Ear Headphones, Adaptive ANC, LHDC 5.0, Immersive Spatial Audio,Upto 60H Playtime, Fast Pairing, Wear Detection(Titanium)
+      </p>
+
+      <h3 style="color:#ff9800; margin-top:25px;">✨ Features</h3>
+
+      <ul class="features">
+        <li>✅Noise Master Buds Max</li>
+        <li>✅  Sound by Bose Wireless Over-Ear Headphones </li>
+        <li>✅ with rating of 4.7 </li>
+        <li>✅ 60hrs battery backup</li>
+        <li>✅ best in that category</li>
+      </ul>
+
+      <a class="btn buy-btn" href="https://amzn.to/4cwsQDW" target="_blank">
+        Buy Now on Amazon
+      </a>
+
+      <a class="btn home-btn" href="index.html">
+        ⬅ Back Home
+      </a>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <div id="about" class="about-box">
+      <h2>About AP TECHZONE</h2>
+      <p>
+        Welcome to <b>AP TECHZONE</b> 🔥 <br><br>
+        Here you will find the best trending Amazon and more another platform products, gadgets, home decor items,
+        and budget-friendly deals. Our goal is to help you buy the best products with honest recommendations.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    ⚠️ Disclaimer: Some links on this website are affiliate links.
+    As an Amazon Associate or more, I earn from qualifying purchases.
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 AP TECHZONE | All Rights Reserved</p>
+    <p>
+      <a href="index.html#privacy">Privacy Policy</a> |
+      <a href="index.html#disclaimer">Affiliate Disclaimer</a>
+    </p>
+  </footer>
+
+</body>
+</html>
