@@ -2,14 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="verify-admitad" content="f52cad9fc4" />
   <meta name="p:domain_verify" content="a0aa2e50f5e7dea7ec1d5cff9677447e"/>
   <meta name="google-site-verification" content="E9HdU3mGgu-ln2Gd5hTtOqdVo1MkFGliSd4xaBigUuY" />
   
   <title>AP TECHZONE - Best Gadgets & Deals</title>
 
-   <!-- SEO Meta Tags -->
+  <!-- SEO Meta Tags -->
   <meta name="description" content="AP TECHZONE brings you the best trending gadgets, viral Pinterest products, home decor items, and Amazon deals in India. Find budget-friendly products that sell fast." />
   
   <meta name="keywords" content="AP TECHZONE, trending gadgets india, amazon deals india, pinterest viral products, best gadgets under 999, home decor products, tech products india, affiliate marketing india" />
@@ -255,11 +253,12 @@
       animation: slideInLeft 1s ease-out;
     }
 
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
 
     /* UPDATED: cursor pointer */
     .product-card {
@@ -272,10 +271,6 @@
       position: relative;
       animation: cardFloat 6s ease-in-out infinite;
       cursor: pointer;
-
-      display: flex;
-flex-direction: column;
-
     }
 
     .product-card::before {
@@ -322,24 +317,6 @@ flex-direction: column;
       opacity: 0.8;
       line-height: 1.5;
     }
-
-    .product-card a {
-  display: inline-block;
-  background: #00e5ff;
-  color: #000;
-  padding: 8px 14px;
-  margin-top: 10px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  width: auto;
-  align-self: center;
-  transition: 0.3s ease;
-}
-
-.product-card a:hover {
-  background: #00bcd4;
-}
 
     .buy-btn {
       display: inline-block;
@@ -509,64 +486,6 @@ flex-direction: column;
         height: auto;
       }
     }
-    @media (max-width: 768px) {
-  body {
-    background-attachment: scroll;
-  }
-}
-@media (max-width: 768px) {
-
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  nav a {
-    font-size: 13px;
-    padding: 6px 8px;
-  }
-
-  .hero h2 {
-    font-size: 22px;
-    white-space: normal;
-    border-right: none;
-  }
-
-  .product-card img {
-    height: 140px;
-  }
-
-}
-
-@media (max-width: 768px) {
-  .card-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-  }
-
-  .product-card {
-    padding: 10px;
-  }
-
-  .product-card img {
-    height: 120px;
-    object-fit: cover;
-  }
-
-  .product-card h3 {
-    font-size: 14px;
-  }
-
-  .product-card p {
-    font-size: 13px;
-  }
-}
   </style>
 </head>
 
@@ -654,7 +573,7 @@ flex-direction: column;
         <h3>Holi Magic Water Balloons</h3>
         <p>  Set of 3 Bunch 111 Holi Magic Water Balloons With Adapter Automatic Latex Non Toxic Vibrant Color Quick Fill Easy Tie Water Balloon Summer Fight Holi Celebration for Unisex Kids Boy Girl</p>
         <a class="buy-btn" href="https://amzn.to/4s3dQlt" target="_blank" onclick="event.stopPropagation();">Buy Now</a>
-      </div>     
+      </div>  
 
        <div class="product-card" onclick="openProduct('products/product51.html')">
         <img src="https://m.media-amazon.com/images/I/814EeAZWMSL._SL1500_.jpg" alt="Artificial Faux Plants Flowers">
@@ -678,6 +597,7 @@ flex-direction: column;
         <p> Artificial Daisy Flowers for Outdoors Fake Flowers Plants Spring Summer Decoration UV Resistant for Outside Home Porch Patio Garden Decor (Multicolor, Pack of 4')</p>
         <a class="buy-btn" href="https://amzn.to/3OlhzfW" target="_blank" onclick="event.stopPropagation();">Buy Now</a>
       </div> 
+      
 
        <div class="product-card" onclick="openProduct('products/product48.html')">
         <img src="https://m.media-amazon.com/images/I/81WWuDV6tyL._SL1500_.jpg" alt="flower vas">
@@ -734,7 +654,7 @@ flex-direction: column;
         <a class="buy-btn" href="https://amzn.to/3MFkcse" target="_blank" onclick="event.stopPropagation();">Buy Now</a>
       </div>
 
-        <div class="product-card" onclick="openProduct('products/product41.html')">
+      <div class="product-card" onclick="openProduct('products/product41.html')">
         <img src="https://m.media-amazon.com/images/I/61jVUB4y7pL._SL1500_.jpg" alt="charging stand">
         <h3>Mobile Phone Charging Stand</h3>
         <p>Mobile Phone Charging Stand,Multi-Functional Storage Holder,Bedside Fixed Rack,Bedroom,Office Accessories,Acrylonitrile Butadiene Styrene,White 01,Portable Electronic Devices,9.9x3x8.6 cm</p>
@@ -832,13 +752,6 @@ flex-direction: column;
         <a class="buy-btn" href="https://amzn.to/4r7ZVuu" target="_blank" onclick="event.stopPropagation();">Buy Now</a>
       </div>
 
-      <div class="product-card" onclick="openProduct('products/product5.html')">
-        <img src="https://m.media-amazon.com/images/I/71Q4Buc8g9L._SL1500_.jpg" alt="moon light">
-        <h3>Aesthetic Home Decor</h3>
-        <p>Stylish LED Acrylic Night Light under 999rs..</p>
-        <a class="buy-btn" href="https://amzn.to/4kCvLx2" target="_blank" onclick="event.stopPropagation();">Buy Now</a>
-      </div>
-
       <div class="product-card" onclick="openProduct('products/product3.html')">
         <img src="https://m.media-amazon.com/images/I/71VtL+lxNhL._SL1024_.jpg" alt="neon light">
         <h3>Cool Neon RGB Light</h3>
@@ -851,6 +764,13 @@ flex-direction: column;
         <h3>Floating Wall Shelf White</h3>
         <p>Luxury 3-Tier Wall Mounted Floating Shelf under 999rs..</p>
         <a class="buy-btn" href="https://amzn.to/4tAXS3Q" target="_blank" onclick="event.stopPropagation();">Buy Now</a>
+      </div>
+
+      <div class="product-card" onclick="openProduct('products/product5.html')">
+        <img src="https://m.media-amazon.com/images/I/71Q4Buc8g9L._SL1500_.jpg" alt="moon light">
+        <h3>Aesthetic Home Decor</h3>
+        <p>Stylish LED Acrylic Night Light under 999rs..</p>
+        <a class="buy-btn" href="https://amzn.to/4kCvLx2" target="_blank" onclick="event.stopPropagation();">Buy Now</a>
       </div>
 
       <div class="product-card" onclick="openProduct('products/product6.html')">
@@ -1124,6 +1044,7 @@ flex-direction: column;
 
 </body>
 </html>
+
 
 
 
